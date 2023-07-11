@@ -12,17 +12,17 @@ function sortedArray(arr, int) {
             mostFreq[arr[i]]++;
         } else {
             mostFreq[arr[i]] = 1;
-            // console.log(mostFreq);
         }
     }
 
     let sortedArray = Object.entries(mostFreq).sort((a, b) => b[1] - a[1]);
-    // console.log(sortedArray);
+    console.log(sortedArray);
 
     let result = [];
     for (let i = 0; i < int; i++) {
         result.push(parseInt(sortedArray[i][0]));
     }
+
     return result;
 }
 
